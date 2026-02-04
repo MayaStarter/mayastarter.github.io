@@ -74,7 +74,7 @@ export default function Navbar() {
             <LanguageSelector />
             
             <motion.a
-              href="https://pump.fun"
+              href="https://t.me/mayastarter"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.8 }}

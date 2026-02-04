@@ -11,22 +11,22 @@ export default function Footer() {
     {
       icon: Twitter,
       name: "X (Twitter)",
-      url: "https://twitter.com/MayaGenesis",
-      handle: "@MayaGenesis",
+      url: "https://x.com/mayastarter",
+      handle: "@mayastarter",
       color: "from-blue-400 to-blue-600"
     },
     {
       icon: Send,
       name: "Telegram",
-      url: "https://t.me/mayagenesis",
-      handle: "t.me/mayagenesis",
+      url: "https://t.me/mayastarter",
+      handle: "t.me/mayastarter",
       color: "from-cyan-400 to-blue-500"
     },
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/mayagenesis",
-      handle: "github.com/mayagenesis",
+      url: "https://github.com/MayaStarter",
+      handle: "github.com/MayaStarter",
       color: "from-gray-400 to-gray-600"
     },
     {

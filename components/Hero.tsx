@@ -178,13 +178,13 @@ export default function Hero() {
         className="flex flex-col sm:flex-row gap-6"
       >
         <motion.a
-          href="https://pump.fun"
+          href="https://t.me/mayastarter"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="group relative px-10 py-5 overflow-hidden rounded-xl text-lg font-bold"
-          aria-label="Enter the Bakery - Buy MAYA on Pump.fun"
+          aria-label="Enter the Bakery - Join MAYA Community"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-gold via-amber to-gold transition-all duration-300 group-hover:scale-105" />
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-amber via-gold to-amber" />
