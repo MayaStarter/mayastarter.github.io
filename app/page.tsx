@@ -3,6 +3,7 @@ import Manifesto from "@/components/Manifesto";
 import LiveFeed from "@/components/LiveFeed";
 import Roadmap from "@/components/Roadmap";
 import Rewards from "@/components/Rewards";
+import HolderBenefits from "@/components/HolderBenefits";
 import Tokenomics from "@/components/Tokenomics";
 import Community from "@/components/Community";
 import FAQ from "@/components/FAQ";
@@ -22,6 +23,7 @@ export default function Home() {
       </section>
       <LiveFeed />
       <Rewards />
+      <HolderBenefits />
       <section id="roadmap">
         <Roadmap />
       </section>

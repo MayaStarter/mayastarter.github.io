@@ -16,14 +16,17 @@ import {
   Landmark,
   Flame,
   BarChart3,
-  Vote,
   Globe,
   Sparkles,
   CheckCircle2,
   Circle,
   Timer,
+  Bot,
+  GraduationCap,
+  Fingerprint,
+  Building2,
+  Gem,
 } from "lucide-react";
-// Rocket is used in Phase IV milestones
 import { useLanguage } from "@/lib/LanguageContext";
 
 const containerVariants = {
@@ -90,14 +93,14 @@ export default function Roadmap() {
         { icon: Handshake, text: "Escrow marketplace MVP — AI-verified smart contracts", status: "pending" },
         { icon: ShieldCheck, text: "Crypto-signed agreements — measurable, verifiable terms", status: "pending" },
         { icon: Store, text: "Production Bonds — sell future work, get capital today", status: "pending" },
-        { icon: Users, text: "Skill Guilds — community self-organizes by craft", status: "pending" },
-        { icon: BarChart3, text: "1-3% escrow fee engine — real protocol revenue", status: "pending" },
+        { icon: Gem, text: "Holder tier system — loyalty rewards with real utility", status: "pending" },
+        { icon: BarChart3, text: "Revenue engine: 1-3% fee → burn + commons + holder share", status: "pending" },
         { icon: Flame, text: "First buyback & burn from marketplace revenue", status: "pending" },
       ],
       highlight: "🤝 Solidarity Marketplace: AI-verified P2P",
       stats: [
         { label: "Escrow Fee", value: "1-3%" },
-        { label: "Burn Share", value: "20%" },
+        { label: "Holder Share", value: "15%" },
       ],
     },
     {
@@ -110,17 +113,17 @@ export default function Roadmap() {
       glowColor: "shadow-purple-500/50",
       description: t("roadmap.phase3.desc"),
       milestones: [
-        { icon: Sparkles, text: "Reputation NFT — soulbound, dynamic, evolves with you", status: "pending" },
-        { icon: Landmark, text: "Commons Treasury — opt-in community savings pool", status: "pending" },
-        { icon: BarChart3, text: "Revenue-Based Financing — micro-loans from real revenue", status: "pending" },
-        { icon: Vote, text: "Quadratic voting for treasury allocation", status: "pending" },
-        { icon: ShieldCheck, text: "Full security audit by top-tier firm", status: "pending" },
+        { icon: Fingerprint, text: "Reputation Protocol (RaaS) — Web3's trust infrastructure", status: "pending" },
+        { icon: GraduationCap, text: "Proof-of-Skill Protocol — on-chain credentials from real work", status: "pending" },
+        { icon: Bot, text: "AI Agent Marketplace — create agents that earn for you 24/7", status: "pending" },
+        { icon: Landmark, text: "Commons Treasury + quadratic voting governance", status: "pending" },
         { icon: Users, text: "Community Challenges — self-organized, reputation is the prize", status: "pending" },
+        { icon: ShieldCheck, text: "Full security audit by top-tier firm", status: "pending" },
       ],
-      highlight: "🏛️ Commons Layer: Community-owned treasury",
+      highlight: "🧠 Intelligence Layer: AI agents + reputation protocol",
       stats: [
-        { label: "Revenue → Commons", value: "30%" },
-        { label: "Revenue → Ops", value: "50%" },
+        { label: "Revenue → Commons", value: "15%" },
+        { label: "Revenue → Holders", value: "15%" },
       ],
     },
     {
@@ -133,10 +136,10 @@ export default function Roadmap() {
       glowColor: "shadow-gold/50",
       description: t("roadmap.phase4.desc"),
       milestones: [
-        { icon: Globe, text: "Multi-language marketplace — global solidarity network", status: "pending" },
+        { icon: Building2, text: "Guild Enterprise Protocol — decentralized teams take on big contracts", status: "pending" },
+        { icon: Globe, text: "Cross-Border Solidarity Network — the Silk Road of value", status: "pending" },
         { icon: Rocket, text: "Community Launchpad — fund projects from Commons Treasury", status: "pending" },
         { icon: Store, text: "Industry-specific bazaars — specialized trade verticals", status: "pending" },
-        { icon: Landmark, text: "Cross-community lending — inter-DAO credit lines", status: "pending" },
         { icon: ShieldCheck, text: "Fully decentralized — no single point of failure", status: "pending" },
       ],
       highlight: "👑 Vision: The Organic Finance Empire",

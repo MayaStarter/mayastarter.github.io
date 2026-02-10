@@ -1,4 +1,4 @@
-export type Language = "en" | "es" | "ja" | "zh" | "de" | "fr";
+export type Language = "en" | "es" | "ja" | "zh" | "de" | "fr" | "tr";
 
 export const languages: { code: Language; name: string; flag: string }[] = [
   { code: "en", name: "English", flag: "🇺🇸" },
@@ -7,6 +7,7 @@ export const languages: { code: Language; name: string; flag: string }[] = [
   { code: "zh", name: "中文", flag: "🇨🇳" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
+  { code: "tr", name: "Türkçe", flag: "🇹🇷" },
 ];
 
 export const translations: Record<Language, Record<string, string>> = {
@@ -57,15 +58,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase1.status": "Live Now",
     "roadmap.phase2.title": "Fermentation",
     "roadmap.phase2.subtitle": "Phase 2",
-    "roadmap.phase2.desc": "AI-verified smart contracts power the solidarity marketplace. Crypto-signed agreements, production bonds, skill guilds, and the first buyback & burn from real protocol revenue.",
+    "roadmap.phase2.desc": "AI-verified escrow marketplace launches. Crypto-signed smart contracts, production bonds, holder tier system with USDC revenue share, and the first buyback & burn from real protocol revenue.",
     "roadmap.phase2.status": "Coming Soon",
     "roadmap.phase3.title": "The Oven",
     "roadmap.phase3.subtitle": "Phase 3",
-    "roadmap.phase3.desc": "Soulbound Reputation NFTs launch — dynamic, portable, evolving with every trade. Self-organized community challenges where reputation is the prize.",
+    "roadmap.phase3.desc": "Reputation Protocol (RaaS) goes live — Web3's trust infrastructure. Proof-of-Skill credentials. AI Agent Marketplace where your bots earn 24/7. Commons Treasury with quadratic voting.",
     "roadmap.phase3.status": "2026",
     "roadmap.phase4.title": "The Bakery",
     "roadmap.phase4.subtitle": "Phase 4",
-    "roadmap.phase4.desc": "Community Launchpad goes live. Commons Treasury funds real projects through DAO voting. Global solidarity network. The organic finance empire.",
+    "roadmap.phase4.desc": "Guild Enterprise Protocol for $50K+ contracts. Cross-Border Solidarity Network — the Silk Road of value. Community Launchpad. The organic finance empire goes global.",
     "roadmap.phase4.status": "The Future",
 
     // Tokenomics
@@ -164,15 +165,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase1.status": "Activo",
     "roadmap.phase2.title": "Fermentación",
     "roadmap.phase2.subtitle": "Fase 2",
-    "roadmap.phase2.desc": "Contratos inteligentes verificados por IA impulsan el mercado solidario. Acuerdos firmados con criptomonedas, bonos de producción, gremios de habilidades y la primera recompra y quema.",
+    "roadmap.phase2.desc": "El mercado escrow verificado por IA se lanza. Contratos inteligentes cripto-firmados, bonos de producción, sistema de niveles para holders con reparto de ingresos en USDC, y la primera recompra y quema.",
     "roadmap.phase2.status": "Próximamente",
     "roadmap.phase3.title": "El Horno",
     "roadmap.phase3.subtitle": "Fase 3",
-    "roadmap.phase3.desc": "Se lanzan los NFT de Reputación Soulbound — dinámicos, portátiles, evolucionan con cada intercambio. Desafíos comunitarios autoorganizados donde la reputación es el premio.",
+    "roadmap.phase3.desc": "Protocolo de Reputación (RaaS) — infraestructura de confianza Web3. Credenciales de habilidades. Mercado de Agentes IA donde tus bots ganan 24/7. Tesorería Comunitaria con votación cuadrática.",
     "roadmap.phase3.status": "2026",
     "roadmap.phase4.title": "La Panadería",
     "roadmap.phase4.subtitle": "Fase 4",
-    "roadmap.phase4.desc": "Se activa la Plataforma de Lanzamiento Comunitaria. La Tesorería Común financia proyectos reales mediante votación DAO. Red solidaria global. El imperio de finanzas orgánicas.",
+    "roadmap.phase4.desc": "Protocolo Guild Enterprise para contratos de $50K+. Red de Solidaridad Transfronteriza. Plataforma de Lanzamiento Comunitaria. El imperio de finanzas orgánicas se globaliza.",
     "roadmap.phase4.status": "El Futuro",
 
     // Tokenomics
@@ -271,15 +272,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase1.status": "稼働中",
     "roadmap.phase2.title": "発酵",
     "roadmap.phase2.subtitle": "フェーズ2",
-    "roadmap.phase2.desc": "AI検証スマートコントラクトが連帯マーケットプレイスを始動。暗号署名契約、生産ボンド、スキルギルド、実収益からの初バイバック＆バーン。",
+    "roadmap.phase2.desc": "AI検証エスクローマーケットプレイス開始。暗号署名スマートコントラクト、生産ボンド、USDC収益シェア付きホルダーティア制、実収益からの初バイバック＆バーン。",
     "roadmap.phase2.status": "近日公開",
     "roadmap.phase3.title": "オーブン",
     "roadmap.phase3.subtitle": "フェーズ3",
-    "roadmap.phase3.desc": "ソウルバウンドレピュテーションNFT登場 — ダイナミックで、ポータブルで、取引ごとに進化。コミュニティ自主チャレンジで評判が報酬に。",
+    "roadmap.phase3.desc": "レピュテーションプロトコル（RaaS）稼働 — Web3の信頼インフラ。スキル証明資格。AIエージェントマーケットプレイス24/7収益。二次投票のコモンズ・トレジャリー。",
     "roadmap.phase3.status": "2026年",
     "roadmap.phase4.title": "ベーカリー",
     "roadmap.phase4.subtitle": "フェーズ4",
-    "roadmap.phase4.desc": "コミュニティ・ローンチパッド稼働。コモンズ・トレジャリーがDAO投票で実プロジェクトに資金提供。グローバル連帯ネットワーク。有機金融帝国。",
+    "roadmap.phase4.desc": "ギルドエンタープライズプロトコルで$50K+の大型契約。越境連帯ネットワーク。コミュニティ・ラーンチパッド。有機金融帝国が世界へ。",
     "roadmap.phase4.status": "未来",
 
     // Tokenomics
@@ -378,15 +379,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase1.status": "进行中",
     "roadmap.phase2.title": "发酵",
     "roadmap.phase2.subtitle": "第二阶段",
-    "roadmap.phase2.desc": "AI验证智能合约驱动团结市场。加密签名协议、生产债券、技能公会，以真实协议收入进行首次回购销毁。",
+    "roadmap.phase2.desc": "AI验证托管市场启动。加密签名智能合约、生产债券、带USDC收益共享的持有者等级制度，以及真实协议收入的首次回购销毁。",
     "roadmap.phase2.status": "即将推出",
     "roadmap.phase3.title": "烤炉",
     "roadmap.phase3.subtitle": "第三阶段",
-    "roadmap.phase3.desc": "灵魂绑定声誉NFT上线 — 动态、可携带、随每次交易进化。自组织社区挑战，声誉就是奖品。",
+    "roadmap.phase3.desc": "声誉协议（RaaS）上线 — Web3信任基础设施。技能证明凭证。AI代理市场7×24小时收益。二次方投票的公共金库。",
     "roadmap.phase3.status": "2026年",
     "roadmap.phase4.title": "面包房",
     "roadmap.phase4.subtitle": "第四阶段",
-    "roadmap.phase4.desc": "社区发射平台上线。公共金库通过DAO投票资助真实项目。全球团结网络。有机金融帝国。",
+    "roadmap.phase4.desc": "公会企业协议承接$50K+大合同。跨境团结网络。社区发射平台。有机金融帝国走向全球。",
     "roadmap.phase4.status": "未来",
 
     // Tokenomics
@@ -485,15 +486,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase1.status": "Jetzt Live",
     "roadmap.phase2.title": "Fermentation",
     "roadmap.phase2.subtitle": "Phase 2",
-    "roadmap.phase2.desc": "KI-verifizierte Smart Contracts treiben den Solidaritätsmarktplatz an. Krypto-signierte Vereinbarungen, Produktionsbonds, Skill-Gilden und der erste Rückkauf & Burn.",
+    "roadmap.phase2.desc": "KI-verifizierter Escrow-Marktplatz startet. Krypto-signierte Smart Contracts, Produktionsbonds, Holder-Tier-System mit USDC-Revenue-Share und erster Rückkauf & Burn.",
     "roadmap.phase2.status": "Demnächst",
     "roadmap.phase3.title": "Der Ofen",
     "roadmap.phase3.subtitle": "Phase 3",
-    "roadmap.phase3.desc": "Soulbound-Reputations-NFTs starten — dynamisch, portabel, entwickeln sich mit jedem Trade. Selbstorganisierte Community-Challenges, bei denen Reputation der Preis ist.",
+    "roadmap.phase3.desc": "Reputationsprotokoll (RaaS) — Web3-Vertrauensinfrastruktur. Skill-Nachweise. KI-Agenten-Marktplatz mit 24/7-Einnahmen. Gemeindekasse mit quadratischer Abstimmung.",
     "roadmap.phase3.status": "2026",
     "roadmap.phase4.title": "Die Bäckerei",
     "roadmap.phase4.subtitle": "Phase 4",
-    "roadmap.phase4.desc": "Community-Launchpad geht live. Die Gemeindekasse finanziert echte Projekte durch DAO-Abstimmung. Globales Solidaritätsnetzwerk. Das organische Finanzimperium.",
+    "roadmap.phase4.desc": "Gilden-Enterprise-Protokoll für $50K+-Verträge. Grenzüberschreitendes Solidaritätsnetzwerk. Community-Launchpad. Das organische Finanzimperium wird global.",
     "roadmap.phase4.status": "Die Zukunft",
 
     // Tokenomics
@@ -592,15 +593,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase1.status": "En Direct",
     "roadmap.phase2.title": "Fermentation",
     "roadmap.phase2.subtitle": "Phase 2",
-    "roadmap.phase2.desc": "Des contrats intelligents vérifiés par IA propulsent le marché solidaire. Accords signés par cryptographie, obligations de production, guildes de compétences et premier rachat & brûlage.",
+    "roadmap.phase2.desc": "Marché escrow vérifié par IA lancé. Contrats intelligents signés par crypto, obligations de production, système de niveaux holders avec partage de revenus USDC, et premier rachat & brûlage.",
     "roadmap.phase2.status": "Bientôt",
     "roadmap.phase3.title": "Le Four",
     "roadmap.phase3.subtitle": "Phase 3",
-    "roadmap.phase3.desc": "Les NFT de Réputation Soulbound arrivent — dynamiques, portables, évoluant avec chaque échange. Défis communautaires auto-organisés où la réputation est le prix.",
+    "roadmap.phase3.desc": "Protocole de Réputation (RaaS) — infrastructure de confiance Web3. Preuves de compétences. Marché d'Agents IA avec revenus 24/7. Trésorerie Commune avec vote quadratique.",
     "roadmap.phase3.status": "2026",
     "roadmap.phase4.title": "La Boulangerie",
     "roadmap.phase4.subtitle": "Phase 4",
-    "roadmap.phase4.desc": "Le Launchpad Communautaire est activé. La Trésorerie Commune finance de vrais projets par vote DAO. Réseau solidaire mondial. L'empire de la finance organique.",
+    "roadmap.phase4.desc": "Protocole Guild Enterprise pour contrats de $50K+. Réseau de Solidarité Transfrontalier. Launchpad Communautaire. L'empire de la finance organique se mondialise.",
     "roadmap.phase4.status": "Le Futur",
 
     // Tokenomics
@@ -650,5 +651,112 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Fermentation...",
+  },
+
+  tr: {
+    // Navbar
+    "nav.manifesto": "Manifesto",
+    "nav.liveFeed": "Canlı Yayın",
+    "nav.roadmap": "Yol Haritası",
+    "nav.tokenomics": "Tokenomik",
+    "nav.buy": "$MAYA Satın Al",
+
+    // Hero
+    "hero.subtitle1": "Modern finans bayatladı.",
+    "hero.subtitle2": "Mayalamaya geldik.",
+    "hero.cta.bakery": "Fırına Gir",
+    "hero.cta.watch": "Ritüeli İzle",
+
+    // Manifesto
+    "manifesto.title": "Manifesto",
+    "manifesto.why.sourdough.q": "Neden Ekşi Maya?",
+    "manifesto.why.sourdough.a": "Çünkü her büyük dönüşüm mikroskobik bir organizma ile başlar. Maya sadece fermente etmez—",
+    "manifesto.why.sourdough.h": "dokunduğu her şeyi dönüştürür.",
+    "manifesto.why.now.q": "Neden Şimdi?",
+    "manifesto.why.now.a": "Doların hegemonyası çöküyor. Merkez bankaları sonsuz para basıyor, sen uyurken birikimlerini eritiyor. Bankalar çöküyor, hesapları donduruyor, kendi paranıza kimin erişeceğine karar veriyor.",
+    "manifesto.why.now.h": "Ekmek küflendi. Yeni bir kültür zamanı.",
+    "manifesto.why.maya.q": "Neden MAYA?",
+    "manifesto.why.maya.a": "Nesilden nesile aktarılan ekşi maya gibi, MAYA yaşayan bir finanstır. Organik büyür, topluluğu besler ve",
+    "manifesto.why.maya.h": "tek bir fırıncı tarafından kontrol edilemez.",
+    "manifesto.quote": "Eski finansal sistem bayat ekmektir. Biz yeni bir kültür başlatmaya geldik.",
+
+    // Live Feed
+    "live.title": "Gözlem Güvertesi",
+    "live.badge": "CANLI",
+    "live.description": "Genesis maya kültürünün canlanışını izle. 7/24 canlı fermentasyon. Kesinti yok. Kurgu yok. Saf organik büyüme.",
+    "live.stream": "[ 7/24 Canlı Yayın ]",
+    "live.comingSoon": "Çok Yakında",
+    "live.ph": "pH Seviyesi",
+    "live.temp": "Sıcaklık",
+    "live.holders": "Holder Sayısı",
+    "live.fermentation": "Fermentasyon",
+
+    // Roadmap
+    "roadmap.title": "Dayanışma Yol Haritası",
+    "roadmap.subtitle": "Genesis'ten pazaryerine. Kültürün büyüyüşünü izle.",
+    "roadmap.phase1.title": "Genesis",
+    "roadmap.phase1.subtitle": "Faz 1",
+    "roadmap.phase1.desc": "Genesis anı. MAYA, Pump.fun'da %100 topluluk dağıtımıyla başlıyor. İçeriden alan yok. Ön satış yok. İlk kültür doğuyor.",
+    "roadmap.phase1.status": "Yayında",
+    "roadmap.phase2.title": "Fermentasyon",
+    "roadmap.phase2.subtitle": "Faz 2",
+    "roadmap.phase2.desc": "AI doğrulamalı escrow pazaryeri başlıyor. Kripto imzalı akıllı sözleşmeler, üretim tahvilleri, USDC gelir paylaşımlı holder tier sistemi ve gerçek protokol gelirinden ilk geri alım & yakım.",
+    "roadmap.phase2.status": "Çok Yakında",
+    "roadmap.phase3.title": "Fırın",
+    "roadmap.phase3.subtitle": "Faz 3",
+    "roadmap.phase3.desc": "İtibar Protokolü (RaaS) devrede — Web3'ün güven altyapısı. Beceri Kanıtı sertifikaları. AI Ajan Pazaryeri 7/24 pasif gelir. Kuadratik oylamalı Ortak Hazine.",
+    "roadmap.phase3.status": "2026",
+    "roadmap.phase4.title": "Fırın İmparatorluğu",
+    "roadmap.phase4.subtitle": "Faz 4",
+    "roadmap.phase4.desc": "Lonca Enterprise Protokolü ile $50K+ büyük sözleşmeler. Sınır Ötesi Dayanışma Ağı — değerin İpek Yolu. Topluluk Rampa'sı. Organik finans imparatorluğu küreselleşiyor.",
+    "roadmap.phase4.status": "Gelecek",
+
+    // Tokenomics
+    "tokenomics.badge": "Tokenomik",
+    "tokenomics.title": "Tarif",
+    "tokenomics.subtitle": "Basit. Şeffaf. Adil. Organik finans böyle başlar.",
+    "tokenomics.community.title": "%100 Topluluk",
+    "tokenomics.community.value": "1 Milyar",
+    "tokenomics.community.suffix": "Token",
+    "tokenomics.community.desc": "Ekip payı yok. İçeriden alan yok. Saf topluluk sahipliği.",
+    "tokenomics.tax.title": "Sıfır Vergi",
+    "tokenomics.tax.value": "0",
+    "tokenomics.tax.suffix": "%",
+    "tokenomics.tax.desc": "Alım/satım vergisi yok. Asla. Özgürce işlem yap.",
+    "tokenomics.lp.title": "LP Yakıldı",
+    "tokenomics.lp.value": "∞",
+    "tokenomics.lp.desc": "LP token'ları kalıcı olarak yok edildi. Likidite sonsuza kadar kilitli.",
+    "tokenomics.renounced.title": "Feragat Edildi",
+    "tokenomics.renounced.value": "100",
+    "tokenomics.renounced.suffix": "%",
+    "tokenomics.renounced.desc": "Kontrat sahipliğinden feragat edildi. Arka kapı yok.",
+    "tokenomics.feature1": "Pump.fun'da Adil Başlangıç",
+    "tokenomics.feature2": "Ön Satış Yok",
+    "tokenomics.feature3": "Ekip Token'ı Yok",
+    "tokenomics.feature4": "Değiştirilemez Kontrat",
+    "tokenomics.feature5": "Topluluk Yönetiminde",
+    "tokenomics.feature6": "Şeffaf & Denetlenebilir",
+    "tokenomics.quote": "Bankalar yoktan para basarken, biz kültürden değer yetiştiriyoruz. 1 milyar token. 1 vizyon. Sonsuz potansiyel.",
+    "tokenomics.contract": "Kontrat Adresi (Solana)",
+
+    // Footer
+    "footer.title": "Miras",
+    "footer.quote": "Sahibi yok. Sadece bir başlangıç.",
+    "footer.description": "MAYA, topluluk odaklı, merkeziyetsiz bir organik finans deneyidir. Merkezi otorite yok. Kurucu kontrolü yok. Sadece kavanozda büyüyen saf kültür.",
+    "footer.joinTitle": "Fermentasyona Katıl",
+    "footer.madeWith": "Yapıldı",
+    "footer.byBakers": "fırıncılar tarafından, fırıncılar için",
+    "footer.rights": "Hiçbir hak saklı değildir. Kültür herkese aittir.",
+    "footer.comingSoon": "Çok Yakında",
+
+    // 404
+    "404.title": "Fermentasyonda Kayboldu",
+    "404.description": "Bu sayfa daha iyi maya bulmaya gitti.",
+    "404.back": "Seni fırına geri götürelim.",
+    "404.home": "Ana Sayfaya Dön",
+    "404.goBack": "Geri Dön",
+
+    // Loading
+    "loading.text": "Mayalanıyor...",
   },
 };
