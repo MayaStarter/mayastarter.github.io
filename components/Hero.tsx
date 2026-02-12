@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Flame, ArrowDown } from "lucide-react";
+import { Sparkles, Flame, ArrowDown, Shield, Coins, Zap } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -55,7 +55,7 @@ export default function Hero() {
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         >
           <div className="absolute inset-0 blur-3xl bg-gold/25 rounded-full scale-75" />
-          <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px]">
+          <div className="relative w-[240px] h-[240px] md:w-[320px] md:h-[320px] lg:w-[360px] lg:h-[360px]">
             <Image
               src="/genesis-jar.png"
               alt="The Genesis Starter - Mystical Sourdough Jar"
@@ -120,13 +120,25 @@ export default function Hero() {
         The Civilization Protocol
       </motion.p>
 
-      {/* Decorative Line */}
+      {/* Trust Signal Pills */}
       <motion.div
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 1.5, delay: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
-        className="w-48 h-px bg-gradient-to-r from-transparent via-gold to-transparent mb-6"
-      />
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.55 }}
+        className="flex flex-wrap items-center justify-center gap-2.5 mb-6"
+      >
+        {[
+          { icon: Coins, label: "100% Community" },
+          { icon: Shield, label: "0% Tax" },
+          { icon: Flame, label: "LP Burned" },
+          { icon: Zap, label: "Fair Launch" },
+        ].map((item, i) => (
+          <div key={i} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gold/10 border border-gold/20">
+            <item.icon className="w-3 h-3 text-gold" />
+            <span className="text-gold/80 text-xs font-medium">{item.label}</span>
+          </div>
+        ))}
+      </motion.div>
 
       {/* Subtitle */}
       <motion.p
@@ -146,10 +158,10 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.8 }}
-        className="text-cream/40 text-sm md:text-base text-center max-w-2xl mb-10 font-inter leading-relaxed"
+        className="text-cream/40 text-sm md:text-base text-center max-w-xl mb-10 font-inter leading-relaxed"
       >
-        A decentralized civilization where communities trade, create, and thrive — 
-        without any central authority. Your marketplace. Your AI. Your network. Your rules.
+        AI-verified marketplace. Soulbound reputation. Real revenue share.
+        15 protocols. One decentralized civilization.
       </motion.p>
 
       {/* CTA Buttons */}
@@ -181,17 +193,17 @@ export default function Hero() {
         </motion.a>
 
         <motion.a
-          href="#manifesto"
+          href="#protocol"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="group relative px-10 py-5 overflow-hidden rounded-xl text-lg font-bold"
-          aria-label="Read the Fermentalist Manifesto"
+          aria-label="Explore the Civilization Protocol"
         >
           <div className="absolute inset-0 gradient-border rounded-xl" />
           <div className="absolute inset-[1px] bg-black/80 rounded-xl backdrop-blur-sm" />
           <span className="relative text-gold flex items-center gap-2 group-hover:text-amber transition-colors">
             <Flame className="w-5 h-5" />
-            Read the Manifesto
+            Explore the Protocol
           </span>
         </motion.a>
       </motion.div>

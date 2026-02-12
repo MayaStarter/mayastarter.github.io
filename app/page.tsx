@@ -1,12 +1,10 @@
 import Hero from "@/components/Hero";
 import Manifesto from "@/components/Manifesto";
-import CivilizationStack from "@/components/CivilizationStack";
+import Protocol from "@/components/Protocol";
+import Value from "@/components/Value";
 import LiveFeed from "@/components/LiveFeed";
-import Rewards from "@/components/Rewards";
-import HolderBenefits from "@/components/HolderBenefits";
 import Roadmap from "@/components/Roadmap";
-import Whitepaper from "@/components/Whitepaper";
-import Tokenomics from "@/components/Tokenomics";
+import WhitepaperCTA from "@/components/WhitepaperCTA";
 import Community from "@/components/Community";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -20,13 +18,11 @@ export default function Home() {
       <ParticleField />
       <Hero />
       <Manifesto />
-      <CivilizationStack />
-      <LiveFeed />
-      <Rewards />
-      <HolderBenefits />
+      <Protocol />
+      <Value />
       <Roadmap />
-      <Whitepaper />
-      <Tokenomics />
+      <LiveFeed />
+      <WhitepaperCTA />
       <Community />
       <FAQ />
       <Footer />
