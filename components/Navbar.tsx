@@ -53,7 +53,7 @@ export default function Navbar() {
                 src="/logo.png"
                 alt="MAYA"
                 fill
-                className="object-cover"
+                className="object-cover scale-[1.15]"
                 sizes="36px"
               />
             </div>
