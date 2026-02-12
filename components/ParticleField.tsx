@@ -41,7 +41,11 @@ export default function ParticleField() {
             top: `${particle.y}%`,
             width: particle.size,
             height: particle.size,
-            background: `radial-gradient(circle, rgba(212, 175, 55, 0.8) 0%, rgba(255, 191, 0, 0.4) 50%, transparent 100%)`,
+            background: particle.id % 3 === 0 
+              ? `radial-gradient(circle, rgba(0, 212, 255, 0.8) 0%, rgba(0, 212, 255, 0.3) 50%, transparent 100%)`
+              : particle.id % 3 === 1
+              ? `radial-gradient(circle, rgba(139, 92, 246, 0.7) 0%, rgba(139, 92, 246, 0.3) 50%, transparent 100%)`
+              : `radial-gradient(circle, rgba(212, 175, 55, 0.8) 0%, rgba(255, 191, 0, 0.4) 50%, transparent 100%)`,
           }}
           animate={{
             y: [0, -100, 0],
@@ -63,7 +67,7 @@ export default function ParticleField() {
         style={{
           left: "10%",
           top: "20%",
-          background: "radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%)",
         }}
         animate={{
           scale: [1, 1.2, 1],
@@ -81,7 +85,7 @@ export default function ParticleField() {
         style={{
           right: "-10%",
           top: "50%",
-          background: "radial-gradient(circle, rgba(255, 191, 0, 0.1) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%)",
         }}
         animate={{
           scale: [1.2, 1, 1.2],
@@ -99,7 +103,7 @@ export default function ParticleField() {
         style={{
           left: "50%",
           bottom: "10%",
-          background: "radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)",
         }}
         animate={{
           scale: [1, 1.3, 1],

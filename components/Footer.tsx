@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Twitter, Send, Github, ExternalLink, Sparkles, Heart, FileText, ScrollText } from "lucide-react";
+import { Twitter, Send, Github, ExternalLink, Heart, FileText, ScrollText } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
+import Image from "next/image";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -93,7 +94,9 @@ export default function Footer() {
             transition={{ duration: 1, ease: [0.22, 0.61, 0.36, 1] }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <Sparkles className="w-8 h-8 text-gold" />
+              <div className="w-9 h-9 rounded-full overflow-hidden relative">
+                <Image src="/logo.png" alt="MAYA" fill className="object-cover" sizes="36px" />
+              </div>
               <h3 className="text-3xl font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold to-amber">
                 {t("footer.title")}
               </h3>
@@ -168,8 +171,8 @@ export default function Footer() {
           
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-gold to-amber flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-background" />
+              <div className="w-8 h-8 rounded-full overflow-hidden relative">
+                <Image src="/logo.png" alt="MAYA" fill className="object-cover" sizes="32px" />
               </div>
               <span className="font-cinzel font-bold text-gold">MAYA</span>
             </div>

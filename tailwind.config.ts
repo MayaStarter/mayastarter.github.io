@@ -14,6 +14,12 @@ const config: Config = {
         gold: "#D4AF37",
         cream: "#F5F5DC",
         amber: "#FFBF00",
+        cyan: "#00D4FF",
+        neon: {
+          cyan: "#00D4FF",
+          purple: "#8B5CF6",
+          blue: "#3B82F6",
+        },
       },
       fontFamily: {
         cinzel: ["var(--font-cinzel)", "serif"],

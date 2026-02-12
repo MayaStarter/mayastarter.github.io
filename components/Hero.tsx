@@ -15,7 +15,7 @@ export default function Hero() {
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full border border-gold/15"
+            className={`absolute rounded-full border ${i % 2 === 0 ? 'border-neon-cyan/10' : 'border-neon-purple/10'}`}
             style={{
               width: `${300 + i * 150}px`,
               height: `${300 + i * 150}px`,
@@ -32,11 +32,11 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Central Glow */}
+      {/* Central Glow - Cyan + Gold dual glow */}
       <motion.div
         className="absolute w-[600px] h-[600px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(212, 175, 55, 0.35) 0%, rgba(255, 191, 0, 0.12) 30%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(0, 212, 255, 0.2) 0%, rgba(139, 92, 246, 0.1) 25%, rgba(212, 175, 55, 0.08) 50%, transparent 70%)",
         }}
         animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -54,13 +54,13 @@ export default function Hero() {
           animate={{ y: [0, -15, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         >
-          <div className="absolute inset-0 blur-3xl bg-gold/25 rounded-full scale-75" />
+          <div className="absolute inset-0 blur-3xl rounded-full scale-90" style={{ background: 'radial-gradient(circle, rgba(0, 212, 255, 0.3) 0%, rgba(139, 92, 246, 0.2) 40%, rgba(212, 175, 55, 0.15) 70%, transparent 100%)' }} />
           <div className="relative w-[240px] h-[240px] md:w-[320px] md:h-[320px] lg:w-[360px] lg:h-[360px]">
             <Image
-              src="/genesis-jar.png"
-              alt="The Genesis Starter - Mystical Sourdough Jar"
+              src="/logo.png"
+              alt="MAYA Protocol - The Civilization Coin"
               fill
-              className="object-contain drop-shadow-[0_0_50px_rgba(212,175,55,0.5)]"
+              className="object-contain drop-shadow-[0_0_40px_rgba(0,212,255,0.4)] drop-shadow-[0_0_80px_rgba(139,92,246,0.2)]"
               priority
             />
           </div>
@@ -69,7 +69,7 @@ export default function Hero() {
           {[...Array(6)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 rounded-full bg-gold/60"
+              className={`absolute w-2 h-2 rounded-full ${i % 3 === 0 ? 'bg-neon-cyan/60' : i % 3 === 1 ? 'bg-neon-purple/50' : 'bg-gold/60'}`}
               style={{
                 left: `${20 + Math.random() * 60}%`,
                 top: `${20 + Math.random() * 60}%`,

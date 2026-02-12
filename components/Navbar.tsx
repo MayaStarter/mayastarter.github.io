@@ -2,9 +2,10 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,11 +44,19 @@ export default function Navbar() {
           {/* Logo */}
           <motion.a
             href="#"
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-2.5 group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Sparkles className="w-8 h-8 text-gold group-hover:text-amber transition-colors" />
+            <div className="relative w-9 h-9 rounded-full overflow-hidden">
+              <Image
+                src="/logo.png"
+                alt="MAYA"
+                fill
+                className="object-cover"
+                sizes="36px"
+              />
+            </div>
             <span className="font-cinzel font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-gold to-amber">
               MAYA
             </span>

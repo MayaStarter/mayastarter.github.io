@@ -81,7 +81,8 @@ export default function Protocol() {
   return (
     <section className="relative py-24 px-4 overflow-hidden" id="protocol">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-gold/4 rounded-full blur-[150px]" />
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-neon-cyan/3 rounded-full blur-[200px]" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-neon-purple/3 rounded-full blur-[200px]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
