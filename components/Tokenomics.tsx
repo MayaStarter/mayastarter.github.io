@@ -57,7 +57,7 @@ export default function Tokenomics() {
   ];
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-center px-4 py-20 relative">
+    <section ref={ref} id="tokenomics" className="min-h-screen flex items-center justify-center px-4 py-20 relative">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div

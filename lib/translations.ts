@@ -68,6 +68,14 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase4.subtitle": "Phase 4",
     "roadmap.phase4.desc": "Guild Enterprise Protocol for $50K+ contracts. Cross-Border Solidarity Network — the Silk Road of value. Community Launchpad. The organic finance empire goes global.",
     "roadmap.phase4.status": "The Future",
+    "roadmap.phase5.title": "The Network",
+    "roadmap.phase5.subtitle": "Phase 5",
+    "roadmap.phase5.desc": "Maya Agora — wallet-based social network. Maya Vault Network — community-owned distributed storage. Maya Daemon — local AI agents. Federated learning. Full protocol decentralization.",
+    "roadmap.phase5.status": "2028",
+    "roadmap.phase6.title": "The Civilization",
+    "roadmap.phase6.subtitle": "Phase 6",
+    "roadmap.phase6.desc": "Network State — digital citizenship and economic sovereignty. Cross-chain reputation portability. Physical supply chain verification. Self-sovereign community governance — full DAO.",
+    "roadmap.phase6.status": "2029+",
 
     // Tokenomics
     "tokenomics.badge": "Tokenomics",
@@ -175,6 +183,14 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase4.subtitle": "Fase 4",
     "roadmap.phase4.desc": "Protocolo Guild Enterprise para contratos de $50K+. Red de Solidaridad Transfronteriza. Plataforma de Lanzamiento Comunitaria. El imperio de finanzas orgánicas se globaliza.",
     "roadmap.phase4.status": "El Futuro",
+    "roadmap.phase5.title": "La Red",
+    "roadmap.phase5.subtitle": "Fase 5",
+    "roadmap.phase5.desc": "Maya Agora — red social basada en wallet. Maya Vault Network — almacenamiento distribuido comunitario. Maya Daemon — agentes IA locales. Aprendizaje federado. Descentralización total del protocolo.",
+    "roadmap.phase5.status": "2028",
+    "roadmap.phase6.title": "La Civilización",
+    "roadmap.phase6.subtitle": "Fase 6",
+    "roadmap.phase6.desc": "Estado Red — ciudadanía digital y soberanía económica. Portabilidad de reputación cross-chain. Verificación de cadena de suministro física. Gobernanza comunitaria soberana — DAO completo.",
+    "roadmap.phase6.status": "2029+",
 
     // Tokenomics
     "tokenomics.badge": "Tokenomics",
@@ -282,6 +298,14 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase4.subtitle": "フェーズ4",
     "roadmap.phase4.desc": "ギルドエンタープライズプロトコルで$50K+の大型契約。越境連帯ネットワーク。コミュニティ・ラーンチパッド。有機金融帝国が世界へ。",
     "roadmap.phase4.status": "未来",
+    "roadmap.phase5.title": "ネットワーク",
+    "roadmap.phase5.subtitle": "フェーズ5",
+    "roadmap.phase5.desc": "Maya Agora — ウォレットベースの分散型ソーシャルネットワーク。Maya Vault Network — コミュニティ所有の分散ストレージ。Maya Daemon — ローカルAIエージェント。連合学習。完全なプロトコル分散化。",
+    "roadmap.phase5.status": "2028",
+    "roadmap.phase6.title": "文明",
+    "roadmap.phase6.subtitle": "フェーズ6",
+    "roadmap.phase6.desc": "ネットワーク国家 — デジタル市民権と経済主権。クロスチェーン評判ポータビリティ。物理サプライチェーン検証。自己主権コミュニティガバナンス — 完全DAO。",
+    "roadmap.phase6.status": "2029+",
 
     // Tokenomics
     "tokenomics.badge": "トケノミクス",
@@ -389,6 +413,14 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase4.subtitle": "第四阶段",
     "roadmap.phase4.desc": "公会企业协议承接$50K+大合同。跨境团结网络。社区发射平台。有机金融帝国走向全球。",
     "roadmap.phase4.status": "未来",
+    "roadmap.phase5.title": "网络",
+    "roadmap.phase5.subtitle": "第五阶段",
+    "roadmap.phase5.desc": "Maya Agora — 基于钱包的去中心化社交网络。Maya Vault Network — 社区所有的分布式存储。Maya Daemon — 本地AI代理。联邦学习。完全协议去中心化。",
+    "roadmap.phase5.status": "2028",
+    "roadmap.phase6.title": "文明",
+    "roadmap.phase6.subtitle": "第六阶段",
+    "roadmap.phase6.desc": "网络国家 — 数字公民身份和经济主权。跨链声誉可移植性。物理供应链验证。自主权社区治理 — 完全DAO。",
+    "roadmap.phase6.status": "2029+",
 
     // Tokenomics
     "tokenomics.badge": "代币经济",
@@ -496,6 +528,14 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase4.subtitle": "Phase 4",
     "roadmap.phase4.desc": "Gilden-Enterprise-Protokoll für $50K+-Verträge. Grenzüberschreitendes Solidaritätsnetzwerk. Community-Launchpad. Das organische Finanzimperium wird global.",
     "roadmap.phase4.status": "Die Zukunft",
+    "roadmap.phase5.title": "Das Netzwerk",
+    "roadmap.phase5.subtitle": "Phase 5",
+    "roadmap.phase5.desc": "Maya Agora — Wallet-basiertes soziales Netzwerk. Maya Vault Network — gemeinschaftseigener verteilter Speicher. Maya Daemon — lokale KI-Agenten. Föderiertes Lernen. Vollständige Protokoll-Dezentralisierung.",
+    "roadmap.phase5.status": "2028",
+    "roadmap.phase6.title": "Die Zivilisation",
+    "roadmap.phase6.subtitle": "Phase 6",
+    "roadmap.phase6.desc": "Netzwerkstaat — digitale Staatsbürgerschaft und wirtschaftliche Souveränität. Cross-Chain-Reputationsportabilität. Physische Lieferkettenverifizierung. Souveräne Community-Governance — vollständige DAO.",
+    "roadmap.phase6.status": "2029+",
 
     // Tokenomics
     "tokenomics.badge": "Tokenomics",
@@ -603,6 +643,14 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase4.subtitle": "Phase 4",
     "roadmap.phase4.desc": "Protocole Guild Enterprise pour contrats de $50K+. Réseau de Solidarité Transfrontalier. Launchpad Communautaire. L'empire de la finance organique se mondialise.",
     "roadmap.phase4.status": "Le Futur",
+    "roadmap.phase5.title": "Le Réseau",
+    "roadmap.phase5.subtitle": "Phase 5",
+    "roadmap.phase5.desc": "Maya Agora — réseau social basé sur wallet. Maya Vault Network — stockage distribué communautaire. Maya Daemon — agents IA locaux. Apprentissage fédéré. Décentralisation complète du protocole.",
+    "roadmap.phase5.status": "2028",
+    "roadmap.phase6.title": "La Civilisation",
+    "roadmap.phase6.subtitle": "Phase 6",
+    "roadmap.phase6.desc": "État Réseau — citoyenneté numérique et souveraineté économique. Portabilité de réputation cross-chain. Vérification physique de chaîne d'approvisionnement. Gouvernance communautaire souveraine — DAO complet.",
+    "roadmap.phase6.status": "2029+",
 
     // Tokenomics
     "tokenomics.badge": "Tokenomics",
@@ -710,6 +758,14 @@ export const translations: Record<Language, Record<string, string>> = {
     "roadmap.phase4.subtitle": "Faz 4",
     "roadmap.phase4.desc": "Lonca Enterprise Protokolü ile $50K+ büyük sözleşmeler. Sınır Ötesi Dayanışma Ağı — değerin İpek Yolu. Topluluk Rampa'sı. Organik finans imparatorluğu küreselleşiyor.",
     "roadmap.phase4.status": "Gelecek",
+    "roadmap.phase5.title": "Ağ",
+    "roadmap.phase5.subtitle": "Faz 5",
+    "roadmap.phase5.desc": "Maya Agora — cüzdan tabanlı merkeziyetsiz sosyal ağ. Maya Vault Network — topluluk sahipliğinde dağıtık depolama. Maya Daemon — yerel yapay zeka ajanları. Federe öğrenme. Tam protokol merkeziyetsizleşme.",
+    "roadmap.phase5.status": "2028",
+    "roadmap.phase6.title": "Medeniyet",
+    "roadmap.phase6.subtitle": "Faz 6",
+    "roadmap.phase6.desc": "Ağ Devleti — dijital vatandaşlık ve ekonomik egemenlik. Zincirler arası itibar taşınabilirliği. Fiziksel tedarik zinciri doğrulama. Topluluk öz-yönetimi — tam DAO.",
+    "roadmap.phase6.status": "2029+",
 
     // Tokenomics
     "tokenomics.badge": "Tokenomik",

@@ -13,13 +13,13 @@ export default function Navbar() {
 
   const navLinks = [
     { name: t("nav.manifesto"), href: "#manifesto" },
+    { name: "Civilization", href: "#civilization" },
     { name: t("nav.liveFeed"), href: "#live-feed" },
-    { name: "Protocol", href: "#rewards" },
+    { name: "Ecosystem", href: "#ecosystem" },
     { name: "Holders", href: "#holder-benefits" },
     { name: t("nav.roadmap"), href: "#roadmap" },
     { name: "Whitepaper", href: "#whitepaper" },
     { name: t("nav.tokenomics"), href: "#tokenomics" },
-    { name: "Community", href: "#community" },
   ];
 
   useEffect(() => {

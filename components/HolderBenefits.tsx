@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import {
   Crown,
   Shield,
@@ -14,15 +14,18 @@ import {
   DollarSign,
   Percent,
   ChevronRight,
-} from 'lucide-react';
+  HeartHandshake,
+  Leaf,
+  Sun,
+  Snowflake,
+  Sprout,
+} from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.12,
-    },
+    transition: { staggerChildren: 0.12 },
   },
 } as const;
 
@@ -31,10 +34,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.7,
-      ease: [0.25, 0.46, 0.45, 0.94] as const,
-    },
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as const },
   },
 } as const;
 
@@ -73,7 +73,7 @@ export default function HolderBenefits() {
     {
       name: "Rising Baker",
       emoji: "🍞",
-      requirement: "30 days + 100$ held",
+      requirement: "30 days + $100 held",
       holdTime: "30 Days",
       color: "text-amber-600",
       borderColor: "border-amber-600/30",
@@ -81,7 +81,7 @@ export default function HolderBenefits() {
       icon: Shield,
       benefits: [
         "Early beta access to marketplace",
-        "Reputation NFT starting boost",
+        "Reputation starting boost",
         "Escrow fee: 2.5% (instead of 3%)",
         "Bond creation rights",
       ],
@@ -89,7 +89,7 @@ export default function HolderBenefits() {
     {
       name: "Master Baker",
       emoji: "👨‍🍳",
-      requirement: "90 days + 500$ held",
+      requirement: "90 days + $500 + 20 trades",
       holdTime: "90 Days",
       color: "text-amber-400",
       borderColor: "border-amber-400/30",
@@ -97,10 +97,10 @@ export default function HolderBenefits() {
       icon: BadgeCheck,
       benefits: [
         "Escrow fee: 2% (instead of 3%)",
-        "Higher bond limits ($2,000)",
-        "Guild creation & leadership rights",
+        "Guild creation & leadership",
         "Revenue share eligibility",
-        "DAO voting rights (Commons Treasury)",
+        "DAO voting rights",
+        "Solidarity Insurance eligible",
       ],
     },
     {
@@ -114,29 +114,36 @@ export default function HolderBenefits() {
       icon: Crown,
       benefits: [
         "All Master Baker benefits",
-        "Exclusive Genesis Badge (never issued again)",
-        "Priority Commons Treasury funding",
+        "Exclusive Genesis Badge (never re-issued)",
         "Escrow fee: 1.5%",
-        "Bond limit: $5,000+",
         "Launchpad proposal rights",
-        "Platform governance veto (critical decisions)",
+        "Governance veto (critical decisions)",
+        "Priority insurance access",
+        "Reputation lending rights",
       ],
     },
   ];
 
   const revenueBreakdown = [
     { label: "Operations", value: "50%", color: "bg-green-500", width: "w-[50%]" },
+    { label: "Holder Revenue", value: "15%", color: "bg-gold", width: "w-[15%]" },
     { label: "Commons Treasury", value: "15%", color: "bg-purple-500", width: "w-[15%]" },
-    { label: "Holder Revenue Share", value: "15%", color: "bg-gold", width: "w-[15%]" },
     { label: "Buyback & Burn", value: "20%", color: "bg-orange-500", width: "w-[20%]" },
+  ];
+
+  const seasons = [
+    { icon: Sprout, name: "Spring", label: "Planting", desc: "New projects funded, guilds formed", color: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/20" },
+    { icon: Sun, name: "Summer", label: "Growing", desc: "Peak production & trading season", color: "text-amber-400", bg: "bg-amber-500/10", border: "border-amber-500/20" },
+    { icon: Leaf, name: "Autumn", label: "Harvest", desc: "Revenue share distributed (USDC)", color: "text-orange-400", bg: "bg-orange-500/10", border: "border-orange-500/20" },
+    { icon: Snowflake, name: "Winter", label: "Rest", desc: "Retrospective, strategy, planning", color: "text-cyan-400", bg: "bg-cyan-500/10", border: "border-cyan-500/20" },
   ];
 
   return (
     <section className="relative py-32 px-4 overflow-hidden" id="holder-benefits">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[200px]" />
-        <div className="absolute bottom-0 right-1/3 w-[400px] h-[400px] bg-amber-500/5 rounded-full blur-[150px]" />
+        <div className="absolute top-0 left-1/3 w-[600px] h-[600px] bg-gold/4 rounded-full blur-[200px]" />
+        <div className="absolute bottom-0 right-1/3 w-[400px] h-[400px] bg-amber-500/4 rounded-full blur-[150px]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -161,11 +168,12 @@ export default function HolderBenefits() {
             </span>
           </h2>
 
-          <p className="font-inter text-cream/60 max-w-3xl mx-auto text-lg">
-            We don&apos;t bribe you with airdrops. We don&apos;t inflate your holdings with fake staking rewards.
-            Instead, loyal holders earn <span className="text-gold font-semibold">real revenue share</span>,{" "}
-            <span className="text-gold font-semibold">lower fees</span>, and{" "}
-            <span className="text-gold font-semibold">exclusive access</span> — all growing as the marketplace grows.
+          <p className="font-inter text-cream/50 max-w-3xl mx-auto text-lg">
+            No airdrops. No fake staking rewards. Loyal holders earn{" "}
+            <span className="text-gold font-semibold">real USDC revenue share</span>,{" "}
+            <span className="text-gold font-semibold">lower fees</span>,{" "}
+            <span className="text-gold font-semibold">solidarity insurance</span>, and{" "}
+            <span className="text-gold font-semibold">seasonal rewards</span> — all growing with the protocol.
           </p>
         </motion.div>
 
@@ -174,41 +182,34 @@ export default function HolderBenefits() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16"
         >
           {tiers.map((tier, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -6, scale: 1.02 }}
               className={`relative p-6 rounded-2xl bg-gradient-to-br ${tier.bgGlow} border ${tier.borderColor} hover:border-gold/40 transition-all duration-500`}
             >
-              {/* Tier Badge */}
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-3xl">{tier.emoji}</span>
                 <div>
                   <h3 className={`font-cinzel text-lg font-bold ${tier.color}`}>{tier.name}</h3>
-                  <p className="text-cream/40 text-xs font-medium">{tier.requirement}</p>
+                  <p className="text-cream/40 text-xs">{tier.requirement}</p>
                 </div>
               </div>
-
-              {/* Hold Time Badge */}
-              <div className="flex items-center gap-2 mb-5 px-3 py-1.5 rounded-lg bg-black/30 w-fit">
+              <div className="flex items-center gap-2 mb-4 px-3 py-1.5 rounded-lg bg-black/30 w-fit">
                 <Clock className="w-3 h-3 text-cream/40" />
-                <span className="text-cream/50 text-xs font-medium">{tier.holdTime}</span>
+                <span className="text-cream/50 text-xs">{tier.holdTime}</span>
               </div>
-
-              {/* Benefits */}
-              <ul className="space-y-2.5">
+              <ul className="space-y-2">
                 {tier.benefits.map((benefit, bIndex) => (
-                  <li key={bIndex} className="flex items-start gap-2 text-sm text-cream/60">
+                  <li key={bIndex} className="flex items-start gap-2 text-sm text-cream/55">
                     <ChevronRight className={`w-3 h-3 mt-1 flex-shrink-0 ${tier.color}`} />
                     <span>{benefit}</span>
                   </li>
                 ))}
               </ul>
-
-              {/* Glow effect for Genesis */}
               {index === 3 && (
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/5 to-transparent pointer-events-none" />
               )}
@@ -216,21 +217,21 @@ export default function HolderBenefits() {
           ))}
         </motion.div>
 
-        {/* Revenue Share Visualization */}
+        {/* Revenue Share */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="mb-16 p-8 md:p-10 rounded-2xl glass-gold border border-gold/20"
+          className="mb-12 p-8 md:p-10 rounded-2xl glass-gold border border-gold/20"
         >
           <div className="flex items-center gap-3 mb-6">
             <DollarSign className="w-6 h-6 text-gold" />
             <h3 className="font-cinzel text-2xl font-bold text-cream">Revenue Share Model</h3>
           </div>
 
-          <p className="text-cream/50 text-sm mb-8 max-w-2xl">
-            Every escrow trade generates 1-3% fee revenue. This real income is split between operations,
-            community, holders, and permanent burn. <span className="text-gold">No tokens are minted — ever.</span>
+          <p className="text-cream/45 text-sm mb-8 max-w-2xl">
+            Every escrow trade generates 1-3% fee. Real income split between operations,
+            holders, community, and permanent burn. <span className="text-gold">No tokens are minted — ever.</span>
           </p>
 
           {/* Revenue Bar */}
@@ -247,61 +248,129 @@ export default function HolderBenefits() {
             </div>
           </div>
 
-          {/* Legend */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {revenueBreakdown.map((item, i) => (
               <div key={i} className="flex items-center gap-2">
                 <div className={`w-3 h-3 rounded-full ${item.color}`} />
-                <span className="text-cream/50 text-sm">{item.label}</span>
+                <span className="text-cream/45 text-sm">{item.label}</span>
               </div>
             ))}
           </div>
 
-          {/* Holder Revenue Example */}
-          <div className="mt-8 p-5 rounded-xl bg-gold/5 border border-gold/10">
+          {/* Revenue Example */}
+          <div className="p-5 rounded-xl bg-gold/5 border border-gold/10">
             <div className="flex items-center gap-2 mb-3">
               <Percent className="w-4 h-4 text-gold" />
-              <p className="text-gold font-semibold text-sm">Holder Revenue Share — Paid in USDC</p>
+              <p className="text-gold font-semibold text-sm">Holder Revenue — Paid in USDC</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div>
-                <p className="text-cream/40 text-xs mb-1">Early Stage (10K$/mo GMV)</p>
-                <p className="text-cream/70 font-medium">~$15/month pool</p>
+                <p className="text-cream/35 text-xs mb-1">Early Stage ($10K/mo)</p>
+                <p className="text-cream/65 font-medium">~$15/month pool</p>
               </div>
               <div>
-                <p className="text-cream/40 text-xs mb-1">Growth (1M$/mo GMV)</p>
-                <p className="text-cream/70 font-medium">~$3,000/month pool</p>
+                <p className="text-cream/35 text-xs mb-1">Growth ($1M/mo)</p>
+                <p className="text-cream/65 font-medium">~$3,000/month pool</p>
               </div>
               <div>
-                <p className="text-cream/40 text-xs mb-1">Scale (100M$/mo GMV)</p>
-                <p className="text-cream/70 font-medium">~$180,000/month pool</p>
+                <p className="text-cream/35 text-xs mb-1">Scale ($100M/mo)</p>
+                <p className="text-cream/65 font-medium">~$180,000/month pool</p>
               </div>
             </div>
-            <p className="text-cream/40 text-xs mt-3">
-              Distributed proportionally by tier weight. Higher tier = larger share. Sell = reset to Fresh Dough.
-            </p>
           </div>
         </motion.div>
 
-        {/* Burn Math Visualization */}
+        {/* Seasonal Economy */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="mb-12 p-8 md:p-10 rounded-2xl glass-gold border border-gold/20"
+        >
+          <h3 className="font-cinzel text-2xl font-bold text-cream mb-2">Seasonal Economy</h3>
+          <p className="text-cream/40 text-sm mb-8">
+            Like nature, the MAYA economy follows seasons. Each quarter brings a different rhythm.
+            Revenue share is distributed every harvest season.
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {seasons.map((season, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -4 }}
+                className={`p-5 rounded-xl ${season.bg} border ${season.border} text-center`}
+              >
+                <season.icon className={`w-7 h-7 ${season.color} mx-auto mb-2`} />
+                <p className={`font-cinzel font-bold ${season.color} text-base mb-0.5`}>{season.name}</p>
+                <p className="text-cream/50 text-xs font-semibold uppercase tracking-wider mb-2">{season.label}</p>
+                <p className="text-cream/40 text-xs leading-relaxed">{season.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Solidarity Insurance */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="p-8 md:p-10 rounded-2xl glass-gold border border-gold/20"
+          className="mb-12 p-8 md:p-10 rounded-2xl border border-pink-500/15 bg-gradient-to-br from-pink-500/5 via-transparent to-rose-500/5"
+        >
+          <div className="flex items-start gap-4 mb-6">
+            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center flex-shrink-0">
+              <HeartHandshake className="w-7 h-7 text-white" />
+            </div>
+            <div>
+              <h3 className="font-cinzel text-2xl font-bold text-cream mb-1">Solidarity Insurance</h3>
+              <p className="text-cream/40 text-sm italic">&ldquo;İmece — When one suffers, the village carries them.&rdquo;</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-5 rounded-xl bg-black/20 border border-cream/5">
+              <p className="text-pink-400 font-bold text-sm mb-2">Who Can Apply?</p>
+              <p className="text-cream/50 text-sm">
+                Master Baker tier or higher (90+ days, 20+ completed trades).
+                Must demonstrate genuine hardship — illness, accident, disaster.
+              </p>
+            </div>
+            <div className="p-5 rounded-xl bg-black/20 border border-cream/5">
+              <p className="text-pink-400 font-bold text-sm mb-2">How It Works</p>
+              <p className="text-cream/50 text-sm">
+                Funded from Commons Treasury. Community votes on each case.
+                No interest. Range: $500-$2,000.
+                Repayable or grant — community decides.
+              </p>
+            </div>
+            <div className="p-5 rounded-xl bg-black/20 border border-cream/5">
+              <p className="text-pink-400 font-bold text-sm mb-2">Why It Matters</p>
+              <p className="text-cream/50 text-sm">
+                No memecoin does this. No freelance platform does this.
+                This is real solidarity — not marketing. People hold MAYA for safety,
+                not just profit.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Burn Math */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="p-8 md:p-10 rounded-2xl glass-gold border border-gold/20 mb-8"
         >
           <div className="flex items-center gap-3 mb-6">
             <Flame className="w-6 h-6 text-orange-400" />
             <h3 className="font-cinzel text-2xl font-bold text-cream">Deflationary Math</h3>
           </div>
 
-          <p className="text-cream/50 text-sm mb-8 max-w-2xl">
-            20% of all revenue buys MAYA from the open market and burns it permanently.
-            Your share of the total supply goes up — <span className="text-gold">without you doing anything</span>.
+          <p className="text-cream/45 text-sm mb-8 max-w-2xl">
+            20% of all revenue buys MAYA and burns it permanently.
+            Your share grows — <span className="text-gold">without doing anything</span>.
           </p>
 
-          {/* Supply Reduction Timeline */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {[
               { year: "Launch", supply: "1,000,000,000", pct: "100%", your: "0.10%" },
               { year: "Year 1", supply: "~997,600,000", pct: "99.76%", your: "0.1002%" },
@@ -309,18 +378,18 @@ export default function HolderBenefits() {
               { year: "Year 5", supply: "~600,000,000", pct: "60%", your: "0.1667%" },
             ].map((item, i) => (
               <div key={i} className="text-center p-4 rounded-xl bg-black/30 border border-cream/5">
-                <p className="text-cream/40 text-xs mb-1">{item.year}</p>
-                <p className="text-cream/70 font-mono text-sm font-medium">{item.supply}</p>
+                <p className="text-cream/35 text-xs mb-1">{item.year}</p>
+                <p className="text-cream/65 font-mono text-sm font-medium">{item.supply}</p>
                 <div className="my-2">
                   <div className="w-full bg-cream/10 rounded-full h-2">
                     <div
-                      className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all"
+                      className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full"
                       style={{ width: item.pct }}
                     />
                   </div>
                 </div>
                 <p className="text-xs">
-                  <span className="text-cream/40">Your share: </span>
+                  <span className="text-cream/35">Your share: </span>
                   <span className="text-gold font-medium">{item.your}</span>
                 </p>
               </div>
@@ -329,29 +398,27 @@ export default function HolderBenefits() {
 
           <div className="flex items-center gap-3 p-4 rounded-xl bg-green-500/5 border border-green-500/10">
             <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0" />
-            <p className="text-cream/60 text-sm">
-              With 1M MAYA held: your ownership grows from <span className="text-green-400 font-semibold">0.10%</span> to{" "}
+            <p className="text-cream/55 text-sm">
+              With 1M MAYA: ownership grows from <span className="text-green-400 font-semibold">0.10%</span> to{" "}
               <span className="text-green-400 font-semibold">0.1667%</span> — a{" "}
-              <span className="text-green-400 font-semibold">67% increase</span> just by holding.
-              No staking. No locking. No inflation. Just math.
+              <span className="text-green-400 font-semibold">67% increase</span>. No staking. No locking. Just math.
             </p>
           </div>
         </motion.div>
 
-        {/* Sell = Reset Warning */}
+        {/* Sell = Reset */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.7, duration: 0.6 }}
-          className="mt-8 p-6 rounded-xl border border-red-500/20 bg-red-500/5 flex items-start gap-4"
+          className="p-6 rounded-xl border border-red-500/20 bg-red-500/5 flex items-start gap-4"
         >
           <Lock className="w-6 h-6 text-red-400 flex-shrink-0 mt-0.5" />
           <div>
             <h4 className="text-red-400 font-bold text-sm mb-1">Sell = Reset</h4>
-            <p className="text-cream/50 text-sm">
-              If you sell your MAYA, your tier resets to Fresh Dough. Hold time restarts from zero.
-              Revenue share stops. Genesis Badge? Gone forever — it will never be issued again.
-              Loyalty is rewarded. Paper hands pay the price.
+            <p className="text-cream/45 text-sm">
+              Sell your MAYA → tier resets to Fresh Dough. Hold time restarts. Revenue share stops.
+              Insurance access revoked. Genesis Badge? Gone forever. Loyalty is rewarded. Paper hands pay the price.
             </p>
           </div>
         </motion.div>

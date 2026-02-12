@@ -1,16 +1,17 @@
 import Hero from "@/components/Hero";
 import Manifesto from "@/components/Manifesto";
+import CivilizationStack from "@/components/CivilizationStack";
 import LiveFeed from "@/components/LiveFeed";
-import Roadmap from "@/components/Roadmap";
 import Rewards from "@/components/Rewards";
 import HolderBenefits from "@/components/HolderBenefits";
+import Roadmap from "@/components/Roadmap";
+import Whitepaper from "@/components/Whitepaper";
 import Tokenomics from "@/components/Tokenomics";
 import Community from "@/components/Community";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import ParticleField from "@/components/ParticleField";
 import Navbar from "@/components/Navbar";
-import Whitepaper from "@/components/Whitepaper";
 
 export default function Home() {
   return (
@@ -18,19 +19,14 @@ export default function Home() {
       <Navbar />
       <ParticleField />
       <Hero />
-      <section id="manifesto">
-        <Manifesto />
-      </section>
+      <Manifesto />
+      <CivilizationStack />
       <LiveFeed />
       <Rewards />
       <HolderBenefits />
-      <section id="roadmap">
-        <Roadmap />
-      </section>
+      <Roadmap />
       <Whitepaper />
-      <section id="tokenomics">
-        <Tokenomics />
-      </section>
+      <Tokenomics />
       <Community />
       <FAQ />
       <Footer />

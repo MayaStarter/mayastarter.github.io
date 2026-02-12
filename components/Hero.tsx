@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Zap, Flame } from "lucide-react";
+import { Sparkles, Flame, ArrowDown } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -15,7 +15,7 @@ export default function Hero() {
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full border border-gold/20"
+            className="absolute rounded-full border border-gold/15"
             style={{
               width: `${300 + i * 150}px`,
               height: `${300 + i * 150}px`,
@@ -25,16 +25,8 @@ export default function Hero() {
               scale: [1, 1.05, 1],
             }}
             transition={{
-              rotate: {
-                duration: 30 + i * 10,
-                repeat: Infinity,
-                ease: "linear",
-              },
-              scale: {
-                duration: 4 + i,
-                repeat: Infinity,
-                ease: "easeInOut",
-              },
+              rotate: { duration: 30 + i * 10, repeat: Infinity, ease: "linear" },
+              scale: { duration: 4 + i, repeat: Infinity, ease: "easeInOut" },
             }}
           />
         ))}
@@ -44,40 +36,26 @@ export default function Hero() {
       <motion.div
         className="absolute w-[600px] h-[600px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, rgba(255, 191, 0, 0.15) 30%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(212, 175, 55, 0.35) 0%, rgba(255, 191, 0, 0.12) 30%, transparent 70%)",
         }}
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.6, 0.9, 0.6],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* The Genesis Jar - Main Image */}
+      {/* The Genesis Jar */}
       <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1.5, ease: [0.22, 0.61, 0.36, 1] }}
-        className="relative z-10 mb-8"
+        className="relative z-10 mb-6"
       >
         <motion.div
           className="relative"
           animate={{ y: [0, -15, 0] }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         >
-          {/* Image Glow Effect */}
-          <div className="absolute inset-0 blur-3xl bg-gold/30 rounded-full scale-75" />
-          
-          {/* Main Jar Image */}
-          <div className="relative w-[320px] h-[320px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px]">
+          <div className="absolute inset-0 blur-3xl bg-gold/25 rounded-full scale-75" />
+          <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px]">
             <Image
               src="/genesis-jar.png"
               alt="The Genesis Starter - Mystical Sourdough Jar"
@@ -86,9 +64,9 @@ export default function Hero() {
               priority
             />
           </div>
-          
-          {/* Floating Particles around the jar */}
-          {[...Array(8)].map((_, i) => (
+
+          {/* Floating Particles */}
+          {[...Array(6)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 rounded-full bg-gold/60"
@@ -109,52 +87,45 @@ export default function Hero() {
               }}
             />
           ))}
-          
-          {/* Floating Icons */}
-          <motion.div
-            className="absolute -top-2 -right-2 w-12 h-12 rounded-full glass-gold flex items-center justify-center"
-            animate={{ y: [0, -10, 0], rotate: [0, 10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Zap className="w-6 h-6 text-gold" />
-          </motion.div>
-          
-          <motion.div
-            className="absolute -bottom-2 -left-2 w-12 h-12 rounded-full glass-gold flex items-center justify-center"
-            animate={{ y: [0, 10, 0], rotate: [0, -10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          >
-            <Flame className="w-6 h-6 text-amber" />
-          </motion.div>
         </motion.div>
       </motion.div>
 
-      {/* Title with Animated Gradient */}
+      {/* Title */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, delay: 0.3, ease: [0.22, 0.61, 0.36, 1] }}
-        className="relative"
+        className="relative text-center"
       >
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold via-amber to-gold text-center mb-2">
-          THE GENESIS STARTER
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold via-amber to-gold mb-2">
+          MAYA
         </h1>
         <motion.div
-          className="absolute inset-0 text-5xl md:text-7xl lg:text-8xl font-cinzel font-bold text-gold/20 blur-2xl text-center pointer-events-none"
+          className="absolute inset-0 text-5xl md:text-7xl lg:text-8xl font-cinzel font-bold text-gold/20 blur-2xl pointer-events-none"
           aria-hidden="true"
           animate={{ opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         >
-          THE GENESIS STARTER
+          MAYA
         </motion.div>
       </motion.div>
+
+      {/* Tagline */}
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="text-sm md:text-base tracking-[0.3em] uppercase text-gold/60 font-inter mb-6"
+      >
+        The Civilization Protocol
+      </motion.p>
 
       {/* Decorative Line */}
       <motion.div
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ duration: 1.5, delay: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
-        className="w-48 h-px bg-gradient-to-r from-transparent via-gold to-transparent my-6"
+        className="w-48 h-px bg-gradient-to-r from-transparent via-gold to-transparent mb-6"
       />
 
       {/* Subtitle */}
@@ -162,7 +133,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, delay: 0.6, ease: [0.22, 0.61, 0.36, 1] }}
-        className="text-xl md:text-2xl lg:text-3xl font-playfair text-cream/90 text-center mb-12 max-w-3xl"
+        className="text-xl md:text-2xl lg:text-3xl font-playfair text-cream/90 text-center mb-4 max-w-3xl"
       >
         {t("hero.subtitle1")} <br />
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-amber font-semibold">
@@ -170,12 +141,23 @@ export default function Hero() {
         </span>
       </motion.p>
 
+      {/* Vision Statement */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.8 }}
+        className="text-cream/40 text-sm md:text-base text-center max-w-2xl mb-10 font-inter leading-relaxed"
+      >
+        A decentralized civilization where communities trade, create, and thrive — 
+        without any central authority. Your marketplace. Your AI. Your network. Your rules.
+      </motion.p>
+
       {/* CTA Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, delay: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
-        className="flex flex-col sm:flex-row gap-6"
+        className="flex flex-col sm:flex-row gap-5"
       >
         <motion.a
           href="https://t.me/mayastarter"
@@ -197,19 +179,19 @@ export default function Hero() {
             style={{ mixBlendMode: "overlay" }}
           />
         </motion.a>
-        
+
         <motion.a
-          href="#live-feed"
+          href="#manifesto"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="group relative px-10 py-5 overflow-hidden rounded-xl text-lg font-bold"
-          aria-label="Watch the fermentation ritual live"
+          aria-label="Read the Fermentalist Manifesto"
         >
           <div className="absolute inset-0 gradient-border rounded-xl" />
           <div className="absolute inset-[1px] bg-black/80 rounded-xl backdrop-blur-sm" />
           <span className="relative text-gold flex items-center gap-2 group-hover:text-amber transition-colors">
             <Flame className="w-5 h-5" />
-            {t("hero.cta.watch")}
+            Read the Manifesto
           </span>
         </motion.a>
       </motion.div>
@@ -224,13 +206,10 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-6 h-10 rounded-full border-2 border-gold/50 flex justify-center pt-2"
+          className="flex flex-col items-center gap-2"
         >
-          <motion.div
-            animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1.5 h-1.5 rounded-full bg-gold"
-          />
+          <span className="text-cream/30 text-xs tracking-wider uppercase">Scroll to explore</span>
+          <ArrowDown className="w-4 h-4 text-gold/40" />
         </motion.div>
       </motion.div>
     </section>
