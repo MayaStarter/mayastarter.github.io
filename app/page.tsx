@@ -10,6 +10,7 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import ParticleField from "@/components/ParticleField";
 import Navbar from "@/components/Navbar";
+import MascotGuide from "@/components/MascotGuide";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Community />
       <FAQ />
       <Footer />
+      <MascotGuide />
     </main>
   );
 }

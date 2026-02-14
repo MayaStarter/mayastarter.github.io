@@ -9,7 +9,7 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-4 py-20 relative overflow-hidden">
       {/* Animated Background Rings */}
       <div className="absolute inset-0 flex items-center justify-center">
         {[...Array(5)].map((_, i) => (
@@ -42,47 +42,13 @@ export default function Hero() {
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* The Genesis Jar + Mascot */}
+      {/* The Genesis Coin */}
       <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1.5, ease: [0.22, 0.61, 0.36, 1] }}
-        className="relative z-10 mb-6 flex items-center gap-0 md:gap-2"
+        className="relative z-10 mb-6"
       >
-        {/* Mascot - Left side */}
-        <motion.div
-          className="hidden md:block relative w-[120px] lg:w-[150px]"
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 1.2 }}
-        >
-          {/* Speech bubble */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 2 }}
-            className="absolute -top-14 -left-2 lg:-top-16 lg:-left-4 z-20"
-          >
-            <div className="relative bg-cream/95 text-background px-3 py-1.5 rounded-xl text-[10px] lg:text-xs font-bold whitespace-nowrap shadow-lg">
-              {t("mascot.hero")}
-              <div className="absolute -bottom-1.5 left-6 w-3 h-3 bg-cream/95 rotate-45" />
-            </div>
-          </motion.div>
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Image
-              src="/mascot.svg"
-              alt="Maya Mascot"
-              width={150}
-              height={165}
-              className="drop-shadow-[0_0_20px_rgba(212,175,55,0.2)]"
-            />
-          </motion.div>
-        </motion.div>
-
-        {/* Coin */}
         <motion.div
           className="relative"
           animate={{ y: [0, -15, 0] }}

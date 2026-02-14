@@ -368,7 +368,22 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Fermenting...",
-    "mascot.hero": "Banks are stale. We rise! 🍞",
+    // Mascot Guide - section messages
+    "mascot.section.hero": "Welcome to the fermentation! 🍞",
+    "mascot.section.manifesto": "Read the doctrine... the recipe for revolution! 📜",
+    "mascot.section.protocol": "The protocol is the yeast of change 🧬",
+    "mascot.section.value": "True value rises slowly, like sourdough 🌾",
+    "mascot.section.roadmap": "Every great bread has a recipe... and timing ⏳",
+    "mascot.section.live-feed": "Watch the culture grow in real time! 📡",
+    "mascot.section.whitepaper": "The full recipe is in the whitepaper 📖",
+    "mascot.section.community": "Stronger together. Every starter needs a colony 🫂",
+    "mascot.section.faq": "Got questions? The culture has answers 💡",
+    // Mascot click reactions
+    "mascot.click.1": "Hey! That tickles! 😄",
+    "mascot.click.2": "Keep clicking and I'll over-proof! 🫠",
+    "mascot.click.3": "Banks wish they had this energy! ⚡",
+    "mascot.click.4": "I'm fermenting greatness here! 🧪",
+    "mascot.click.5": "Patience... the best bread takes time 🕰️",
   },
 
   es: {
@@ -728,7 +743,21 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Fermentando...",
-    "mascot.hero": "¡Los bancos están rancios! 🍞",
+    // Mascot Guide
+    "mascot.section.hero": "¡Bienvenido a la fermentación! 🍞",
+    "mascot.section.manifesto": "Lee la doctrina... ¡la receta de la revolución! 📜",
+    "mascot.section.protocol": "El protocolo es la levadura del cambio 🧬",
+    "mascot.section.value": "El verdadero valor sube lento, como la masa madre 🌾",
+    "mascot.section.roadmap": "Todo gran pan tiene receta... y su tiempo ⏳",
+    "mascot.section.live-feed": "¡Mira crecer el cultivo en tiempo real! 📡",
+    "mascot.section.whitepaper": "La receta completa está en el whitepaper 📖",
+    "mascot.section.community": "Más fuertes juntos. Cada starter necesita su colonia 🫂",
+    "mascot.section.faq": "¿Tienes preguntas? El cultivo tiene respuestas 💡",
+    "mascot.click.1": "¡Oye! ¡Eso hace cosquillas! 😄",
+    "mascot.click.2": "¡Sigue haciendo clic y me sobrefermentaré! 🫠",
+    "mascot.click.3": "¡Los bancos desearían esta energía! ⚡",
+    "mascot.click.4": "¡Estoy fermentando grandeza! 🧪",
+    "mascot.click.5": "Paciencia... el mejor pan lleva su tiempo 🕰️",
   },
 
   ja: {
@@ -1088,7 +1117,21 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "発酵中...",
-    "mascot.hero": "銀行はもう古い！🍞",
+    // Mascot Guide
+    "mascot.section.hero": "発酵の世界へようこそ！🍞",
+    "mascot.section.manifesto": "教義を読め...革命のレシピだ！📜",
+    "mascot.section.protocol": "プロトコルは変革の酵母 🧬",
+    "mascot.section.value": "本当の価値はゆっくり膨らむ 🌾",
+    "mascot.section.roadmap": "偉大なパンにはレシピと時間が必要 ⏳",
+    "mascot.section.live-feed": "培養の成長をリアルタイムで見よう！📡",
+    "mascot.section.whitepaper": "完全なレシピはホワイトペーパーに 📖",
+    "mascot.section.community": "一緒に強くなろう。スターターにはコロニーが必要 🫂",
+    "mascot.section.faq": "質問がある？培養が答えを持っている 💡",
+    "mascot.click.1": "おい！くすぐったい！😄",
+    "mascot.click.2": "クリックしすぎると過発酵するよ！🫠",
+    "mascot.click.3": "銀行はこのエネルギーが欲しいはず！⚡",
+    "mascot.click.4": "偉大さを発酵中！🧪",
+    "mascot.click.5": "忍耐...最高のパンには時間がかかる 🕰️",
   },
 
   zh: {
@@ -1448,7 +1491,21 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "发酵中...",
-    "mascot.hero": "银行已过时，我们崛起！🍞",
+    // Mascot Guide
+    "mascot.section.hero": "欢迎来到发酵世界！🍞",
+    "mascot.section.manifesto": "阅读教义...革命的配方！📜",
+    "mascot.section.protocol": "协议是变革的酵母 🧬",
+    "mascot.section.value": "真正的价值慢慢发酵 🌾",
+    "mascot.section.roadmap": "伟大的面包需要配方和时间 ⏳",
+    "mascot.section.live-feed": "实时观看培养物生长！📡",
+    "mascot.section.whitepaper": "完整配方在白皮书里 📖",
+    "mascot.section.community": "团结更强大。每个发酵剂都需要菌落 🫂",
+    "mascot.section.faq": "有问题？培养物有答案 💡",
+    "mascot.click.1": "嘿！好痒！😄",
+    "mascot.click.2": "再点就要过度发酵了！🫠",
+    "mascot.click.3": "银行希望拥有这种能量！⚡",
+    "mascot.click.4": "正在发酵伟大！🧪",
+    "mascot.click.5": "耐心...最好的面包需要时间 🕰️",
   },
 
   de: {
@@ -1808,7 +1865,21 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Fermentiert...",
-    "mascot.hero": "Banken sind altbacken! 🍞",
+    // Mascot Guide
+    "mascot.section.hero": "Willkommen zur Fermentation! 🍞",
+    "mascot.section.manifesto": "Lies die Doktrin... das Rezept der Revolution! 📜",
+    "mascot.section.protocol": "Das Protokoll ist die Hefe des Wandels 🧬",
+    "mascot.section.value": "Wahrer Wert steigt langsam, wie Sauerteig 🌾",
+    "mascot.section.roadmap": "Jedes große Brot hat ein Rezept... und Timing ⏳",
+    "mascot.section.live-feed": "Beobachte die Kultur in Echtzeit wachsen! 📡",
+    "mascot.section.whitepaper": "Das vollständige Rezept steht im Whitepaper 📖",
+    "mascot.section.community": "Stärker zusammen. Jeder Starter braucht eine Kolonie 🫂",
+    "mascot.section.faq": "Fragen? Die Kultur hat Antworten 💡",
+    "mascot.click.1": "Hey! Das kitzelt! 😄",
+    "mascot.click.2": "Weitermachen und ich übergäre! 🫠",
+    "mascot.click.3": "Banken wünschen sich diese Energie! ⚡",
+    "mascot.click.4": "Ich fermentiere Großartiges! 🧪",
+    "mascot.click.5": "Geduld... das beste Brot braucht Zeit 🕰️",
   },
 
   fr: {
@@ -2168,7 +2239,21 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Fermentation...",
-    "mascot.hero": "Les banques sont périmées ! 🍞",
+    // Mascot Guide
+    "mascot.section.hero": "Bienvenue dans la fermentation ! 🍞",
+    "mascot.section.manifesto": "Lis la doctrine... la recette de la révolution ! 📜",
+    "mascot.section.protocol": "Le protocole est le levain du changement 🧬",
+    "mascot.section.value": "La vraie valeur monte lentement, comme le levain 🌾",
+    "mascot.section.roadmap": "Tout grand pain a sa recette... et son timing ⏳",
+    "mascot.section.live-feed": "Observe la culture grandir en temps réel ! 📡",
+    "mascot.section.whitepaper": "La recette complète est dans le whitepaper 📖",
+    "mascot.section.community": "Plus forts ensemble. Chaque starter a besoin d'une colonie 🫂",
+    "mascot.section.faq": "Des questions ? La culture a les réponses 💡",
+    "mascot.click.1": "Hé ! Ça chatouille ! 😄",
+    "mascot.click.2": "Continue et je vais sur-fermenter ! 🫠",
+    "mascot.click.3": "Les banques aimeraient avoir cette énergie ! ⚡",
+    "mascot.click.4": "Je fermente de la grandeur ici ! 🧪",
+    "mascot.click.5": "Patience... le meilleur pain prend du temps 🕰️",
   },
 
   tr: {
@@ -2528,6 +2613,20 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Mayalanıyor...",
-    "mascot.hero": "Bankalar bayatladı! Biz kabarıyoruz! 🍞",
+    // Mascot Guide
+    "mascot.section.hero": "Fermentasyona hoş geldin! 🍞",
+    "mascot.section.manifesto": "Doktrini oku... devrimin tarifi burada! 📜",
+    "mascot.section.protocol": "Protokol, değişimin mayası 🧬",
+    "mascot.section.value": "Gerçek değer yavaşça kabarır, ekşi maya gibi 🌾",
+    "mascot.section.roadmap": "Her büyük ekmeğin bir tarifi ve zamanlaması var ⏳",
+    "mascot.section.live-feed": "Kültürün gerçek zamanlı büyümesini izle! 📡",
+    "mascot.section.whitepaper": "Tam tarif whitepaper'da 📖",
+    "mascot.section.community": "Birlikte daha güçlüyüz. Her maya bir koloniye ihtiyaç duyar 🫂",
+    "mascot.section.faq": "Soruların mı var? Kültürde cevaplar saklı 💡",
+    "mascot.click.1": "Hey! Gıdıklanıyorum! 😄",
+    "mascot.click.2": "Tıklamaya devam et, kabaracağım! 🫠",
+    "mascot.click.3": "Bankalar bu enerjiyi kıskanır! ⚡",
+    "mascot.click.4": "Burada büyüklük mayalıyorum! 🧪",
+    "mascot.click.5": "Sabır... en iyi ekmek zamana ihtiyaç duyar 🕰️",
   },
 };

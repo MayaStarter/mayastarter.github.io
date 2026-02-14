@@ -94,8 +94,8 @@ export default function Footer() {
             transition={{ duration: 1, ease: [0.22, 0.61, 0.36, 1] }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 relative">
-                <Image src="/mascot.svg" alt="Maya" fill className="object-contain" sizes="48px" />
+              <div className="w-9 h-9 rounded-full overflow-hidden relative">
+                <Image src="/logo.png" alt="MAYA" fill className="object-contain" sizes="36px" />
               </div>
               <h3 className="text-3xl font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold to-amber">
                 {t("footer.title")}
