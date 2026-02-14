@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export default function LoadingPage() {
   return (
@@ -10,7 +10,7 @@ export default function LoadingPage() {
       <motion.div
         className="absolute w-[400px] h-[400px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%)",
         }}
         animate={{
           scale: [1, 1.5, 1],
@@ -24,41 +24,35 @@ export default function LoadingPage() {
       />
 
       <div className="relative flex flex-col items-center">
-        {/* Spinning Rings */}
-        <div className="relative w-32 h-32">
-          <motion.div
-            className="absolute inset-0 rounded-full border-2 border-gold/30"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+        {/* Mascot with breathing animation */}
+        <motion.div
+          animate={{ 
+            scale: [1, 1.08, 1],
+            y: [0, -5, 0],
+          }}
+          transition={{ 
+            duration: 2, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+          className="relative"
+        >
+          <Image
+            src="/mascot.svg"
+            alt="Maya"
+            width={140}
+            height={154}
+            className="drop-shadow-[0_0_30px_rgba(212,175,55,0.3)]"
+            priority
           />
-          <motion.div
-            className="absolute inset-2 rounded-full border-2 border-amber/40"
-            animate={{ rotate: -360 }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-          />
-          <motion.div
-            className="absolute inset-4 rounded-full border-2 border-gold/50"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-          />
-          
-          {/* Center Icon */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <Sparkles className="w-10 h-10 text-gold" />
-            </motion.div>
-          </div>
-        </div>
+        </motion.div>
 
         {/* Text */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-8 font-cinzel text-gold text-xl"
+          className="mt-4 font-cinzel text-gold text-xl"
         >
           Fermenting...
         </motion.p>

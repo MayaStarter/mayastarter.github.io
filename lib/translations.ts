@@ -368,6 +368,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Fermenting...",
+    "mascot.hero": "Banks are stale. We rise! 🍞",
   },
 
   es: {
@@ -727,6 +728,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Fermentando...",
+    "mascot.hero": "¡Los bancos están rancios! 🍞",
   },
 
   ja: {
@@ -1086,6 +1088,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "発酵中...",
+    "mascot.hero": "銀行はもう古い！🍞",
   },
 
   zh: {
@@ -1445,6 +1448,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "发酵中...",
+    "mascot.hero": "银行已过时，我们崛起！🍞",
   },
 
   de: {
@@ -1804,6 +1808,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Fermentiert...",
+    "mascot.hero": "Banken sind altbacken! 🍞",
   },
 
   fr: {
@@ -2163,6 +2168,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Fermentation...",
+    "mascot.hero": "Les banques sont périmées ! 🍞",
   },
 
   tr: {
@@ -2522,5 +2528,6 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Loading
     "loading.text": "Mayalanıyor...",
+    "mascot.hero": "Bankalar bayatladı! Biz kabarıyoruz! 🍞",
   },
 };

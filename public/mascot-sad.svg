@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220">
+  <defs>
+    <radialGradient id="body-grad-sad" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" style="stop-color:#FFF8E7"/>
+      <stop offset="60%" style="stop-color:#F5E6C8"/>
+      <stop offset="100%" style="stop-color:#E8D5A8"/>
+    </radialGradient>
+    <radialGradient id="shadow-grad-sad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="blush-sad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFB5A0;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#FFB5A0;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="210" rx="55" ry="8" fill="url(#shadow-grad-sad)"/>
+
+  <!-- Feet -->
+  <ellipse cx="78" cy="195" rx="12" ry="6" fill="#E8D5A8" stroke="#8B6914" stroke-width="1.5"/>
+  <ellipse cx="122" cy="195" rx="12" ry="6" fill="#E8D5A8" stroke="#8B6914" stroke-width="1.5"/>
+
+  <!-- Main body - slightly deflated -->
+  <path d="M100 30 
+    C60 30, 38 55, 35 82 
+    C31 115, 42 150, 52 165 
+    C62 180, 77 193, 100 193 
+    C123 193, 138 180, 148 165 
+    C158 150, 169 115, 165 82 
+    C162 55, 140 30, 100 30 Z" 
+    fill="url(#body-grad-sad)" stroke="#8B6914" stroke-width="2.5"/>
+
+  <!-- Body bumps -->
+  <circle cx="55" cy="75" r="16" fill="#FFF8E7" stroke="#D4BF8A" stroke-width="1" opacity="0.4"/>
+  <circle cx="142" cy="80" r="13" fill="#FFF8E7" stroke="#D4BF8A" stroke-width="1" opacity="0.35"/>
+  <circle cx="100" cy="50" r="12" fill="#FFF8E7" stroke="#D4BF8A" stroke-width="1" opacity="0.35"/>
+
+  <!-- Arms hanging down sadly -->
+  <path d="M42 115 C32 125, 30 145, 38 155" 
+    fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="38" cy="157" rx="6" ry="4" fill="#F5E6C8" stroke="#8B6914" stroke-width="1.5"/>
+  
+  <path d="M158 115 C168 125, 170 145, 162 155" 
+    fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="162" cy="157" rx="6" ry="4" fill="#F5E6C8" stroke="#8B6914" stroke-width="1.5"/>
+
+  <!-- Sad eyes -->
+  <!-- Left eye -->
+  <ellipse cx="78" cy="98" rx="8" ry="9" fill="#2D1B00"/>
+  <ellipse cx="78" cy="98" rx="7.5" ry="8.5" fill="#1a0f00"/>
+  <circle cx="80" cy="94" r="3" fill="white" opacity="0.9"/>
+  <circle cx="75" cy="100" r="1.5" fill="white" opacity="0.4"/>
+  <!-- Sad eyebrow left -->
+  <path d="M65 82 C70 78, 80 78, 88 84" fill="none" stroke="#5C3A00" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Right eye -->
+  <ellipse cx="122" cy="98" rx="8" ry="9" fill="#2D1B00"/>
+  <ellipse cx="122" cy="98" rx="7.5" ry="8.5" fill="#1a0f00"/>
+  <circle cx="124" cy="94" r="3" fill="white" opacity="0.9"/>
+  <circle cx="119" cy="100" r="1.5" fill="white" opacity="0.4"/>
+  <!-- Sad eyebrow right -->
+  <path d="M112 84 C120 78, 130 78, 135 82" fill="none" stroke="#5C3A00" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Tear drops -->
+  <ellipse cx="68" cy="108" rx="2.5" ry="4" fill="#87CEEB" opacity="0.7">
+    <animate attributeName="cy" values="108;130;108" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0;0.7" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="132" cy="110" rx="2.5" ry="4" fill="#87CEEB" opacity="0.6">
+    <animate attributeName="cy" values="110;132;110" dur="2.3s" repeatCount="indefinite" begin="0.5s"/>
+    <animate attributeName="opacity" values="0.6;0;0.6" dur="2.3s" repeatCount="indefinite" begin="0.5s"/>
+  </ellipse>
+
+  <!-- Cheek blush (faded) -->
+  <ellipse cx="60" cy="112" rx="10" ry="7" fill="url(#blush-sad)"/>
+  <ellipse cx="140" cy="112" rx="10" ry="7" fill="url(#blush-sad)"/>
+
+  <!-- Sad mouth -->
+  <path d="M88 125 C92 118, 108 118, 112 125" fill="none" stroke="#5C3A00" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- One lonely bubble -->
+  <circle cx="65" cy="45" r="3" fill="#F5E6C8" stroke="#D4BF8A" stroke-width="1" opacity="0.4">
+    <animate attributeName="cy" values="45;25;45" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Crumb particles -->
+  <circle cx="70" cy="205" r="2" fill="#E8D5A8" opacity="0.5"/>
+  <circle cx="90" cy="208" r="1.5" fill="#E8D5A8" opacity="0.4"/>
+  <circle cx="115" cy="206" r="1.8" fill="#E8D5A8" opacity="0.5"/>
+  <circle cx="130" cy="209" r="1.5" fill="#E8D5A8" opacity="0.3"/>
+</svg>

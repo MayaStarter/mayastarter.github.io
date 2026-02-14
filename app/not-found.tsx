@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Home, ArrowLeft, Sparkles } from "lucide-react";
+import { Home, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function NotFound() {
@@ -30,23 +31,31 @@ export default function NotFound() {
       </div>
 
       <div className="relative z-10 text-center max-w-2xl">
-        {/* 404 Number */}
+        {/* Sad Mascot + 404 */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.22, 0.61, 0.36, 1] }}
-          className="relative mb-8"
+          className="relative mb-6 flex flex-col items-center"
         >
-          <h1 className="text-[150px] md:text-[200px] font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-b from-gold via-gold/50 to-transparent leading-none">
+          {/* Sad mascot */}
+          <motion.div
+            animate={{ y: [0, -5, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Image
+              src="/mascot-sad.svg"
+              alt="Maya is sad"
+              width={160}
+              height={176}
+              className="drop-shadow-[0_0_20px_rgba(212,175,55,0.2)]"
+              priority
+            />
+          </motion.div>
+
+          <h1 className="text-[100px] md:text-[140px] font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-b from-gold via-gold/50 to-transparent leading-none -mt-4">
             404
           </h1>
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          >
-            <Sparkles className="w-20 h-20 text-gold/30" />
-          </motion.div>
         </motion.div>
 
         {/* Message */}
