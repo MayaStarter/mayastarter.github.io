@@ -20,7 +20,6 @@ export default function Problem() {
         t("problem.platforms.l3"),
         t("problem.platforms.l4"),
       ],
-      stat: t("problem.platforms.stat"),
       color: "from-red-500 to-orange-500",
       bg: "bg-red-500/5",
       border: "border-red-500/20",
@@ -34,7 +33,6 @@ export default function Problem() {
         t("problem.banks.l3"),
         t("problem.banks.l4"),
       ],
-      stat: t("problem.banks.stat"),
       color: "from-orange-500 to-yellow-500",
       bg: "bg-orange-500/5",
       border: "border-orange-500/20",
@@ -48,7 +46,6 @@ export default function Problem() {
         t("problem.borders.l3"),
         t("problem.borders.l4"),
       ],
-      stat: t("problem.borders.stat"),
       color: "from-yellow-500 to-red-500",
       bg: "bg-yellow-500/5",
       border: "border-yellow-500/20",
@@ -111,15 +108,11 @@ export default function Problem() {
                 ))}
               </div>
 
-              {/* Stat */}
-              <div className="mt-auto pt-4 border-t border-cream/5">
-                <p className="text-cream/30 text-xs font-mono">{card.stat}</p>
-              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Transition Line */}
+        {/* Transition → Solution */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -127,9 +120,41 @@ export default function Problem() {
           className="text-center"
         >
           <div className="w-px h-12 bg-gradient-to-b from-red-500/30 to-gold/50 mx-auto mb-6" />
-          <p className="font-playfair text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-cream via-gold to-cream italic max-w-2xl mx-auto">
+          <p className="font-playfair text-lg md:text-xl text-cream/60 italic max-w-2xl mx-auto mb-10">
             {t("problem.transition")}
           </p>
+
+          {/* Solution Pillars */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.9, duration: 0.8 }}
+          >
+            <span className="inline-block px-4 py-2 rounded-full bg-gold/10 border border-gold/20 text-gold text-sm font-medium tracking-wider mb-6">
+              {t("problem.solution.badge")}
+            </span>
+            <h3 className="font-cinzel text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold via-amber to-gold mb-8">
+              {t("problem.solution.title")}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              {[
+                { label: "The Crust", text: t("problem.solution.crust"), color: "text-amber-400", border: "border-amber-500/20", bg: "bg-amber-500/5" },
+                { label: "The Handshake", text: t("problem.solution.handshake"), color: "text-blue-400", border: "border-blue-500/20", bg: "bg-blue-500/5" },
+                { label: "The Harvest", text: t("problem.solution.harvest"), color: "text-green-400", border: "border-green-500/20", bg: "bg-green-500/5" },
+              ].map((pillar, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 1.0 + i * 0.12, duration: 0.6 }}
+                  className={`p-5 rounded-xl ${pillar.bg} border ${pillar.border} text-left`}
+                >
+                  <p className={`font-cinzel text-sm font-bold ${pillar.color} mb-2`}>{pillar.label}</p>
+                  <p className="text-cream/50 text-sm font-inter leading-relaxed">{pillar.text}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
